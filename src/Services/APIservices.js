@@ -1,8 +1,6 @@
 import axios from 'axios';
 
-
 // const BASE_URL = "http://localhost:9000";
-// // const BASE_URL = "https://url-backend-z3ta.onrender.com";
 const BASE_URL = "https://url-backend-z3ta.onrender.com";
 
 export const addUser = async (payload) => {
