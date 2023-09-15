@@ -5,7 +5,7 @@ const NameContext = createContext();
 const NameProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState({fname:"", lname:"", email:"", id:""});
   const [isLogged, setIsLogged] = useState(false) 
-  const serverURL = "http://localhost:9000";
+  const serverURL = "https://url-backend-z3ta.onrender.com";
 
   return (
     
