@@ -1,11 +1,11 @@
 import { createContext, useState, useContext } from "react";
 
-const NameContext = createContext(); //1
+const NameContext = createContext(); 
 
 const NameProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState({fname:"", lname:"", email:"", id:""});
   const [isLogged, setIsLogged] = useState(false) 
-  const serverURL = "https://url-backend-z3ta.onrender.com";
+  const serverURL = "https://url-shortner-backend-lbc1.onrender.com";
 
   return (
     
