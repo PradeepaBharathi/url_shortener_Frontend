@@ -70,9 +70,9 @@ function AllURL() {
   },[isLogged,currentUser])
   return (
     <>
-      <h4 className=" text-decoration-underline mb-3" id="head"> All URLs </h4> 
+      <h4 className=" text-decoration-underline mb-3"> All URLs </h4> 
       <div className='d-flex flex-column justify-content-center align-items-center flex-wrap'>
-        <h5 id="head" >Total URLs created by user : {urlList.length}</h5>
+        <h5>Total URLs created by user : {urlList.length}</h5>
         <div className=' w-75 overflow-auto'>
 
       { urlList.length &&

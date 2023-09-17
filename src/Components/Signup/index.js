@@ -3,7 +3,7 @@ import { useState } from "react";
 import { addUser } from '../../Services/APIservices.js';
 import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../../Context/context";
-import"./signup.css"
+
 
 function Signup() {
   const {setIsLogged, setCurrentUser} = useGlobalContext();
@@ -55,42 +55,42 @@ function Signup() {
   return (
     <>
     <div className="d-flex justify-content-end align-items-end mt-3"> 
-       <button className="btn btn-info m-3" onClick={handleClick} id="btn2">Log in</button>
+       <button className="btn btn-info m-3" onClick={handleClick}>Log in</button>
    </div>
    <div className="container ">
    <div className="d-flex justify-content-center align-items-center flex-lg-row">
    <div className=" border border-dark rounded bg-light p-5 mt-3 col-lg-6">
-       <h5 className="text-decoration-underline mb-3" id="head"> Sign up </h5> 
+       <h5 className="text-decoration-underline mb-3"> Sign up </h5> 
        <form onSubmit={handleSubmit}>
            <div className="my-3">
-           <label id="email">
+           <label>
                Enter email:
            </label>
            <br></br>
            <input type="email" onChange={(e) => setEmail(e.target.value)} required></input>
            </div>
            <div className="my-3">
-           <label id="first">
+           <label>
                Enter First Name:
            </label>
            <br></br>
            <input type="text" onChange={(e) => setFname(e.target.value)} required></input>
            </div>
            <div className="my-3">
-           <label id="last">
+           <label>
                Enter Last Name:
            </label>
            <br></br>
            <input type="text" onChange={(e) => setLname(e.target.value)} required></input>
            </div>
            <div className="my-2">
-           <label id="password">
+           <label>
                Enter Password:
            </label>
            <br></br>
            <input type="password" onChange={(e) => setPwd(e.target.value)} required></input>
            </div>
-           <button type="submit" className="btn btn-sm btn-primary mt-3" id="btn1">Sign up</button>
+           <button type="submit" className="btn btn-sm btn-primary mt-3">Sign up</button>
        </form>
        {error && <h6 className="m-3 text-danger text-break"> User account not created. Please try again.</h6>}
        {success && <h6 className="m-3 text-success text-break"> User Account created !! </h6>}

@@ -115,18 +115,18 @@ function DashboardURL() {
   return ( 
       <>
        <LogButton/> 
-       <h5 className="fs-4 text-decoration-underline mb-3"id="head"> URL Dashboard </h5> 
-       {!(localStorage.getItem("loggedUsername")) ? <h5 className='my-2'id="head" >Log in to use the app.</h5>
+       <h5 className="fs-4 text-decoration-underline mb-3"> URL Dashboard </h5> 
+       {!(localStorage.getItem("loggedUsername")) ? <h5 className='my-2'>Log in to use the app.</h5>
        : <div className='container-fluid'>
         <div className='row gx-3'>
           <div className='col-md-4 col-sm-12'>
           <div className='d-flex flex-column justify-content-center align-items-center'>
-              <h6 id="head"> Past month activity : </h6> 
-              <h2 > {monthlyURLlist.length}</h2>
-              <button className='btn btn-primary my-2' id="btn1">
-              <NavLink className="nav-link" to="/create-url" >Create URL</NavLink>
+              <h6> Past month activity : </h6> 
+              <h2> {monthlyURLlist.length}</h2>
+              <button className='btn btn-primary my-2'>
+              <NavLink className="nav-link" to="/create-url">Create URL</NavLink>
               </button> 
-              <button className='btn btn-primary my-2'id="btn2">
+              <button className='btn btn-primary my-2'>
               <NavLink className="nav-link" to="/all-url">View all URLs</NavLink>
               </button> 
           </div>
@@ -134,7 +134,7 @@ function DashboardURL() {
           </div>
           <div className='col-md-8 col-sm-12'>
           <div className='d-flex flex-column justify-content-center align-items-center'>
-          <h6 id="head">Today : {urlList.length > 0 ? urlList.length : "-"} </h6> 
+          <h6>Today : {urlList.length > 0 ? urlList.length : "-"} </h6> 
           <div className='w-75 overflow-auto'>
 
               { urlList.length ?
@@ -170,7 +170,33 @@ function DashboardURL() {
         </div>
        </div>
        } 
-      
+      {/* <div className='mx-5'>
+
+      { monthlyURLlist.length &&
+        <table className="table table-success table-striped table-responsive-md mt-3 "> 
+        <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Date</th>
+        <th scope="col">Short URL</th>
+        <th scope="col">clicked</th>
+        <th scope="col">LongURL</th>
+      </tr>
+    </thead>
+    <tbody>
+        { monthlyURLlist.map((el,i) => 
+        <tr key={el.urlID}>
+           <th scope="row">{i+1}</th>
+           <td>{el.createdOn}</td>
+          <td><a value={el.urlID} href={`${serverURL}/${el.urlID}`} onClick={handleCount} target="_blank" >{el.shortURL}</a> </td>
+          <td>{el.clicked}</td>
+          <td>{el.longURL.substring(0,16)+"..."} </td>
+        </tr>
+        )}
+        </tbody>
+        </table>
+      }
+      </div>  */}
 
     </>
   )
