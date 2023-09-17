@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 
-const BASE_URL = "https://url-backend-z3ta.onrender.com";
-// // const BASE_URL = "https://url-backend-z3ta.onrender.com";
 // const BASE_URL = "https://url-backend-z3ta.onrender.com";
+const BASE_URL = "https://url-backend-z3ta.onrender.com";
+// const BASE_URL = "http://localhost:9000";
 
 export const addUser = async (payload) => {
     const response = await axios.post(`${BASE_URL}/user/signup`, payload);
@@ -33,7 +33,7 @@ export const getMonthlyURL = async (data, config) => {
     return response;
 }
 export const createURL = async (data, config) => {
-    const response = await axios.post("https://url-backend-z3ta.onrender.com/url/createURL",data, config)
+    const response = await axios.post(`${BASE_URL}/url/createURL`,data, config)
     return response;
 }
 export const updateURLCount = async (data, config) => {
